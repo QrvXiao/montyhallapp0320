@@ -1,0 +1,25 @@
+{
+  "resourceName": "dynamo6b109afa",
+  "tableName": "dynamo6b109afa",
+  "partitionKey": {
+    "fieldName": "testcolumn",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "testGSIname",
+      "partitionKey": {
+        "fieldName": "testcolumn",
+        "fieldType": "string"
+      }
+    },
+    {
+      "name": "testGSIname",
+      "partitionKey": {
+        "fieldName": "testcolumn",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}

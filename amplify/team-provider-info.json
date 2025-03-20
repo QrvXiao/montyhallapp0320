@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-montyhallapp-dev-ac64d-authRole",
+      "UnauthRoleArn": "arn:aws:iam::954976332982:role/amplify-montyhallapp-dev-ac64d-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::954976332982:role/amplify-montyhallapp-dev-ac64d-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-montyhallapp-dev-ac64d-deployment",
+      "UnauthRoleName": "amplify-montyhallapp-dev-ac64d-unauthRole",
+      "StackName": "amplify-montyhallapp-dev-ac64d",
+      "StackId": "arn:aws:cloudformation:us-east-1:954976332982:stack/amplify-montyhallapp-dev-ac64d/4ef2bcc0-05d1-11f0-8833-12c0b6a971db",
+      "AmplifyAppId": "d1lzbod9ghhdkl"
+    },
+    "categories": {
+      "auth": {
+        "montyhallapp4f05c127": {}
+      },
+      "function": {
+        "montyhallapp26e793d9": {
+          "deploymentBucketName": "amplify-montyhallapp-dev-ac64d-deployment",
+          "s3Key": "amplify-builds/montyhallapp26e793d9-42516b7853484933454e-build.zip"
+        }
+      },
+      "storage": {
+        "dynamo6b109afa": {}
+      },
+      "api": {
+        "api06e35108": {}
+      }
+    }
+  }
+}
