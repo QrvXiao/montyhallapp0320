@@ -1,0 +1,14 @@
+{
+  "resourceName": "MontyHallRecords",
+  "tableName": "MontyHallRecords",
+  "partitionKey": {
+    "fieldName": "gameId",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "timestamp",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

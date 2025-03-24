@@ -1,18 +1,35 @@
 {
   "api": {
-    "api06e35108": {
+    "montyhallapp": {
       "dependsOn": [
         {
           "attributes": [
-            "Name",
-            "Arn"
+            "UserPoolId"
           ],
-          "category": "function",
-          "resourceName": "montyhallapp26e793d9"
+          "category": "auth",
+          "resourceName": "montyhallapp4f05c127"
         }
       ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authmontyhallapp4f05c127"
+              }
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
       "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
+      "service": "AppSync"
     }
   },
   "auth": {
@@ -42,46 +59,32 @@
     }
   },
   "function": {
-    "montyhallapp26e793d9": {
+    "montyhallappb9d9a6f1": {
       "build": true,
-      "dependsOn": [
-        {
-          "attributeEnvMap": {
-            "Arn": "TABLE_ARN",
-            "Name": "TABLE_NAME"
-          },
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "storage",
-          "resourceName": "dynamo6b109afa"
-        }
-      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_montyhallapp26e793d9_deploymentBucketName": {
+    "AMPLIFY_function_montyhallappb9d9a6f1_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "montyhallapp26e793d9"
+          "resourceName": "montyhallappb9d9a6f1"
         }
       ]
     },
-    "AMPLIFY_function_montyhallapp26e793d9_s3Key": {
+    "AMPLIFY_function_montyhallappb9d9a6f1_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "montyhallapp26e793d9"
+          "resourceName": "montyhallappb9d9a6f1"
         }
       ]
     }
   },
   "storage": {
-    "dynamo6b109afa": {
+    "MontyHallRecords": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"
     }

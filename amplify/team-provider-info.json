@@ -15,17 +15,17 @@
       "auth": {
         "montyhallapp4f05c127": {}
       },
+      "storage": {
+        "MontyHallRecords": {}
+      },
       "function": {
-        "montyhallapp26e793d9": {
+        "montyhallappb9d9a6f1": {
           "deploymentBucketName": "amplify-montyhallapp-dev-ac64d-deployment",
-          "s3Key": "amplify-builds/montyhallapp26e793d9-42516b7853484933454e-build.zip"
+          "s3Key": "amplify-builds/montyhallappb9d9a6f1-6e61646231635065675a-build.zip"
         }
       },
-      "storage": {
-        "dynamo6b109afa": {}
-      },
       "api": {
-        "api06e35108": {}
+        "montyhallapp": {}
       }
     }
   }

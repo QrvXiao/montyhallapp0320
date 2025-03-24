@@ -15,14 +15,6 @@
     },
     "s3Key": {
       "Type": "String"
-    },
-    "storagedynamo6b109afaName": {
-      "Type": "String",
-      "Default": "storagedynamo6b109afaName"
-    },
-    "storagedynamo6b109afaArn": {
-      "Type": "String",
-      "Default": "storagedynamo6b109afaArn"
     }
   },
   "Conditions": {
@@ -55,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "montyhallapp26e793d9",
+            "montyhallappb9d9a6f1",
             {
               "Fn::Join": [
                 "",
                 [
-                  "montyhallapp26e793d9",
+                  "montyhallappb9d9a6f1",
                   "-",
                   {
                     "Ref": "env"
@@ -97,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "montyhallappLambdaRole5b887dcf",
+            "montyhallappLambdaRole018ccdcc",
             {
               "Fn::Join": [
                 "",
                 [
-                  "montyhallappLambdaRole5b887dcf",
+                  "montyhallappLambdaRole018ccdcc",
                   "-",
                   {
                     "Ref": "env"
@@ -168,34 +160,6 @@
                   }
                 ]
               }
-            },
-            {
-              "Effect": "Allow",
-              "Action": [
-                "dynamodb:DescribeTable",
-                "dynamodb:GetItem",
-                "dynamodb:Query",
-                "dynamodb:Scan",
-                "dynamodb:PutItem",
-                "dynamodb:UpdateItem",
-                "dynamodb:DeleteItem"
-              ],
-              "Resource": [
-                {
-                  "Ref": "storagedynamo6b109afaArn"
-                },
-                {
-                  "Fn::Join": [
-                    "/",
-                    [
-                      {
-                        "Ref": "storagedynamo6b109afaArn"
-                      },
-                      "index/*"
-                    ]
-                  ]
-                }
-              ]
             }
           ]
         }

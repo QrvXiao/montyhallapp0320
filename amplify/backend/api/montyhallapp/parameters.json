@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "montyhallapp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authmontyhallapp4f05c127",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
